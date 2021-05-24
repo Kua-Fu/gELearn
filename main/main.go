@@ -17,3 +17,27 @@ func main() {
 	fmt.Println("hello world!")
 	fmt.Println("hello sunshine!")
 }
+
+// ESIndexDateInfo = {
+
+// 	"wksp_1_keyevent": [
+// 		{
+// 			"wksp_1_keyevent-000001":
+// 			[1611736990817, 1619343990838]
+// 		},
+// 		{
+// 			"wksp_1_keyevent-000002":
+// 			[1611736990817, 1619343990838]
+// 		}
+// 	],
+// 	"wksp_2_keyevent": [
+// 		{
+// 			"wksp_2_keyevent-000001":
+// 			[1611736990817, 1619343990838]
+// 		},
+// 		{
+// 			"wksp_2_keyevent-000002":
+// 			[1611736990817, 1619343990838]
+// 		}
+// 	],
+// }
