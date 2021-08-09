@@ -23,3 +23,11 @@ func TestExp(t *testing.T) {
 		fmt.Println(a)
 	}
 }
+
+func TestCO(t *testing.T) {
+
+	CObjectRegExp := "^(extra_).*"
+	s1 := "extra_f1"
+	match, err := regexp.MatchString(CObjectRegExp, s1)
+	fmt.Println("match--", match, err)
+}
