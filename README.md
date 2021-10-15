@@ -1,2 +1,2 @@
 # gELearn
-learn golang with emacs
+learn go& with emacs
