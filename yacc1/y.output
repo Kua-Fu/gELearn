@@ -1,0 +1,71 @@
+
+state 0
+	$accept: .top $end 
+	expr: .    (2)
+
+	LeftBracket  shift 3
+	.  reduce 2 (src line 28)
+
+	expr  goto 2
+	top  goto 1
+
+state 1
+	$accept:  top.$end 
+
+	$end  accept
+	.  error
+
+
+state 2
+	top:  expr.    (1)
+
+	.  reduce 1 (src line 22)
+
+
+state 3
+	expr:  LeftBracket.columns RightBracket 
+
+	TokColumn  shift 5
+	.  error
+
+	columns  goto 4
+
+state 4
+	expr:  LeftBracket columns.RightBracket 
+	columns:  columns.TokColumn 
+
+	RightBracket  shift 6
+	TokColumn  shift 7
+	.  error
+
+
+state 5
+	columns:  TokColumn.    (4)
+
+	.  reduce 4 (src line 37)
+
+
+state 6
+	expr:  LeftBracket columns RightBracket.    (3)
+
+	.  reduce 3 (src line 32)
+
+
+state 7
+	columns:  columns TokColumn.    (5)
+
+	.  reduce 5 (src line 42)
+
+
+8 terminals, 4 nonterminals
+6 grammar rules, 8/16000 states
+0 shift/reduce, 0 reduce/reduce conflicts reported
+53 working sets used
+memory: parser 2/240000
+0 extra closures
+4 shift entries, 1 exceptions
+3 goto entries
+0 entries saved by goto default
+Optimizer space used: output 7/240000
+7 table entries, 0 zero
+maximum spread: 6, maximum offset: 6
